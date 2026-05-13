@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - BookVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="nav-logo"><i class="fas fa-book-open"></i> BookVerse</a>
+        <div class="nav-links">
+            <a href="/" class="nav-item">Home</a>
+            <a href="/cart.html" class="nav-item">Cart</a>
+            <a href="/admin.html" class="nav-item active">Admin</a>
+        </div>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle"><i class="fas fa-moon"></i></button>
+            <div id="authArea"></div>
+        </div>
+    </nav>
+
+    <section class="page-section">
+        <div class="page-header">
+            <h1><i class="fas fa-cog"></i> Admin Panel</h1>
+            <button class="btn btn-accent" id="addBookBtn"><i class="fas fa-plus"></i> Add New Book</button>
+        </div>
+
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="books">Manage Books</button>
+            <button class="tab-btn" data-tab="orders">View Orders</button>
+        </div>
+
+        <div id="adminContent">
+            <div class="loader">Loading...</div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box modal-lg">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <div id="toast" class="toast"></div>
+
+    <footer class="footer">
+        <div class="footer-bottom">&copy; 2026 BookVerse. All rights reserved.</div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>
